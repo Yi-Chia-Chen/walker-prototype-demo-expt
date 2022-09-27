@@ -183,7 +183,7 @@ instr_text[1] = "Your contributions may help in designing robots and making anim
 instr_text[2] = 'Please help us by reading the instructions in the next few pages carefully, and avoid using the refresh or back buttons.';
 instr_text[3] = 'Now, please maximize your browser window.';
 instr_text[4] = 'Please also turn off any music you are playing. Music is known to have effects on our kind of studies and it will make our data unusable.';
-instr_text[5] = 'This study has two parts, and will takes about 30-40 minutes in total to complete.';
+instr_text[5] = 'This study has two parts, and will takes about 5 minutes in total to complete.';
 instr_text[6] = "Here's your job for the first part: you will be shown " + INSTR_TRIAL_N + ' movies of people walking, one at a time. The walkers in the movies are illustrated only with a few light dots, as in the example below.';
 instr_text[7] = 'We are interested in <span class="emphasis">how <strong>visually pleasing</strong> you find each walking style to be</span>.<br /><br />In other words, how good/beautiful do you think the walking style looks?';
 instr_text[8] = 'Six options will be available below the movie as six buttons (as in below). Just click one of the options based on your preference.';
