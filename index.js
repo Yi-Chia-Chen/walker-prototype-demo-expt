@@ -118,6 +118,13 @@ const SUBJ_TITLES = [
     'viewportW',
     'viewportH'];
 
+function INVALID_ID_FUNC() {
+    $('#instrText').html("We can't identify a valid code from subject pool website. Please reopen the study from the subject pool website again. Thank you!");
+    $('#nextButton').hide();
+    $('#captchaBox').hide();
+    $('#instrBox').show();
+}
+
 function HANDLE_VISIBILITY_CHANGE() {
     if (document.hidden) {
         subj.hiddenCount += 1;
