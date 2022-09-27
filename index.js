@@ -30,10 +30,7 @@ const INSTR_Q_ANSWER = ['aesthetics'];
 // trial variables
 const STIM_PATH = 'Stimuli/';
 const WALKER_LIST = [
-    'ale', 'alx', 'bar','boo', 'chr',
-    'dav', 'emm', 'gra', 'ian', 'jan',
-    'jen', 'jua', 'mac', 'mar', 'mil',
-    'ndy', 'pet', 'rac', 'ros', 'she'
+    'dav', 'emm'
 ];
 
 const EMOTION_LIST = ['nu', 'ha', 'an', 'sa'];
@@ -79,7 +76,11 @@ $(document).ready(function() {
         $('#nextButton').hide();
         $('#instrBox').show();
     } else if (subj.id !== null){
-        $('#captchaBox').show();
+        instr = new instrObject(instr_options);
+        instr.start();
+        instr.currentQ = 'aesthetics';
+        trial_options['subj'] = subj;
+        trial = new trialObject(trial_options);
     }
 });
 
@@ -116,22 +117,6 @@ const SUBJ_TITLES = [
     'inView',
     'viewportW',
     'viewportH'];
-
-function INVALID_ID_FUNC() {
-    $('#instrText').html("We can't identify a valid code from subject pool website. Please reopen the study from the subject pool website again. Thank you!");
-    $('#nextButton').hide();
-    $('#captchaBox').hide();
-    $('#instrBox').show();
-}
-
-function CONTINUE() {
-    $('#captchaBox').hide();
-    instr = new instrObject(instr_options);
-    instr.start();
-    instr.currentQ = 'aesthetics';
-    trial_options['subj'] = subj;
-    trial = new trialObject(trial_options);
-}
 
 function HANDLE_VISIBILITY_CHANGE() {
     if (document.hidden) {
